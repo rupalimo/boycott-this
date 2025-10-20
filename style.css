@@ -32,7 +32,7 @@ body {
 }
 
 main,
-header {
+header, footer {
 	width: 60vw;
 	margin: 0 auto;
 	text-align: justify;
@@ -40,7 +40,6 @@ header {
 
 header {
 	height: 4rem;
-	border-bottom: 1px solid var(--accent-colour);
 }
 
 header nav {
@@ -59,11 +58,20 @@ header nav a[href='#'], li[data-confirm='undefined'], details[data-confirm='unde
 
 header nav a {
 	text-decoration: none;
-	color: var(--text);
+	color: var(--accent-colour	);
 }
 
-header nav a:visited {
-	color: var(--accent-colour	);
+h1 {
+	border-top: 1px solid var(--accent-colour);
+	text-align: center;
+	text-transform: capitalize;
+	padding: 1rem;
+}
+
+footer {
+	padding: 4rem 0;
+	text-align: right;
+	color: var(--grey);
 }
 
 #statements,
