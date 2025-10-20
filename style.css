@@ -1,0 +1,78 @@
+@font-face {
+	font-family: '';
+	src: url('') format('woff2');
+	font-weight: normal;
+	font-style: normal;
+}
+
+:root {
+	--body-font: 'Arial', sans-serif;
+	--secondary-font: 'Times New Roman', serif;
+	--text: #000000;
+	--grey: #acacac;
+	--accent-colour: red;
+
+	font-family: var(--body-font);
+	color: var(--text);
+	font-size: 16px;
+}
+
+html {
+	-webkit-text-size-adjust: 100%;
+	-webkit-tap-highlight-color: transparent;
+	box-sizing: border-box;
+	scroll-behavior: smooth;
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	margin: 0;
+	padding: 0;
+}
+
+main,
+header {
+	width: 60vw;
+	margin: 0 auto;
+	text-align: justify;
+}
+
+header {
+	height: 4rem;
+	border-bottom: 1px solid var(--accent-colour);
+}
+
+header nav {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	position: fixed;
+	width: inherit;	
+	top: 1rem;
+}
+
+header nav a[href='#'], li[data-confirm='undefined'], details[data-confirm='undefined'], p[data-confirm='undefined'] {
+	display: none;
+}
+
+header nav a {
+	text-decoration: none;
+	color: var(--text);
+}
+
+header nav a:visited {
+	color: var(--accent-colour	);
+}
+
+#statements,
+#media {
+	display: none;
+}
+
+@media only screen and (max-width: 1024px) {
+}
+
+@media only screen and (max-width: 768px) {
+}
