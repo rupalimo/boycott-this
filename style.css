@@ -83,4 +83,11 @@ footer {
 }
 
 @media only screen and (max-width: 768px) {
+	main,
+header, footer {
+	width: 80vw;
+	margin: 0 auto;
+	text-align: justify;
+}
+
 }
