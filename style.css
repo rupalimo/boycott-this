@@ -11,7 +11,7 @@
 	--text: #000000;
 	--grey: #acacac;
 	--accent-colour: red;
-
+--green: #81ce0f;
 	font-family: var(--body-font);
 	color: var(--text);
 	font-size: 16px;
@@ -34,7 +34,8 @@ body {
 main,
 header,
 footer {
-	width: 60vw;
+	width: 90vw;
+	max-width: 1440px;
 	margin: 0 auto;
 }
 
@@ -44,37 +45,49 @@ header {
 	/* flex-wrap: wrap-reverse; */
 }
 
-header nav {
-	display: flex;
-	flex-direction: row;
-	flex-wrap: wrap;
-	justify-content: space-evenly;
-	text-align: center;
-		padding: 1rem 0;
+header img {
+	width: calc(100% - 2rem);
+	padding: 1rem;
 }
 
-header nav a[href='#'],
+main nav {
+	display: flex;
+	flex-direction: row;
+	padding: 1rem;
+	width: 100%;
+	flex-wrap: wrap;
+	justify-content: space-evenly;
+	border: 1px solid var(--text);
+	border-style: dotted none;
+}
+
+
+main nav a[href='#'],
 li[data-confirm='undefined'],
 details[data-confirm='undefined'],
 p[data-confirm='undefined'] {
 	display: none;
 }
 
-header nav a {
+main nav a {
 	text-decoration: none;
-	color: var(--accent-colour);
-	/* border-bottom: 4px solid var(--accent-colour);
-	font-size: 1rem; */
+	color: var(--text);
+	text-transform: uppercase;
+	font-size: 0.85rem;
+}
+
+main nav a:hover {
+		text-decoration: underline;
 
 }
 
-header img {
-	width: calc(100% - 2rem);
-	padding: 1rem;
+main section {
+	grid-column: 2;
+	padding: 1rem 0 2rem 0;
 }
+
 
 h1 {
-	border-top: 1px solid var(--accent-colour);
 	text-align: center;
 	text-transform: capitalize;
 	padding: 1rem;
@@ -98,6 +111,6 @@ footer {
 	main,
 	header,
 	footer {
-		width: 80vw;
+		width: calc(100% - 2rem);
 	}
 }
