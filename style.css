@@ -29,28 +29,49 @@ html {
 body {
 	margin: 0;
 	padding: 0;
+	position: relative;
+}
+
+header {
+	width: calc(100% - 2rem);
+	margin: 0 auto;
 }
 
 main,
-header,
 footer {
-	width: 60vw;
-	margin: 0 auto;
+	width: calc(80% - 2rem);
+	margin: 0 6rem 0 auto;
 }
 
 header {
 	display: flex;
 	flex-direction: column;
-	/* flex-wrap: wrap-reverse; */
+	position: fixed;
+	top: 0;
+	left: 1rem;
+}
+
+header .top {
+	text-align: justify;
+	padding: 1rem 0 0 0;
+}
+
+header .top:after {
+	content: '';
+	display: inline-block;
+	width: 100%;
+}
+
+header .top em {
+	color: var(--accent-colour);
+	font-style: normal;
 }
 
 header nav {
 	display: flex;
-	flex-direction: row;
-	flex-wrap: wrap;
-	justify-content: space-evenly;
-	text-align: center;
-		padding: 1rem 0;
+	flex-direction: column;
+	margin-top: 4rem;
+	/* padding: 1rem 0; */
 }
 
 header nav a[href='#'],
@@ -62,10 +83,19 @@ p[data-confirm='undefined'] {
 
 header nav a {
 	text-decoration: none;
-	color: var(--accent-colour);
+	color: var(--text);
+	font-weight: bold;
 	/* border-bottom: 4px solid var(--accent-colour);
 	font-size: 1rem; */
+}
 
+header a {
+	text-transform: uppercase;
+	font-weight: bold;
+	height: 1.15em;
+	line-height: 1.15;
+	color: var(--text);
+	text-decoration: none;
 }
 
 header img {
@@ -73,11 +103,20 @@ header img {
 	padding: 1rem;
 }
 
+header nav a:first-of-type {
+	display: none;
+}
+
 h1 {
-	border-top: 1px solid var(--accent-colour);
+	border-bottom: 1px solid var(--accent-colour);
 	text-align: center;
 	text-transform: capitalize;
 	padding: 1rem;
+}
+
+main {
+	font-size: 2rem;
+	margin-top: 8rem;
 }
 
 footer {
