@@ -28,6 +28,14 @@ $(document).ready(function () {
 						`</li>`
 				).appendTo('#signatories');
 
+				let pre = $(
+					`<p data-confirm="` +
+						entry.signatoriesTotal +
+						`">` +
+						entry.signatoriesTotal +
+						`</p>`
+				).appendTo('#total');
+
 				let details = $(
 					`<details data-confirm="` +
 						entry.faqTitle +
