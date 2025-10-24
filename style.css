@@ -103,9 +103,6 @@ header img {
 	padding: 1rem;
 }
 
-header nav a:first-of-type {
-	display: none;
-}
 
 h1 {
 	border-bottom: 1px solid var(--accent-colour);
