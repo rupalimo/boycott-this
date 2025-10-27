@@ -1,20 +1,20 @@
 @font-face {
 	font-family: 'Authentic-90';
-	src: url('AUTHENTICSans-90.woff') format('woff2');
+	src: url('fonts/AUTHENTICSans-90.woff') format('woff2');
 	font-weight: normal;
 	font-style: normal;
 }
 
 @font-face {
-	font-family: 'Happy-Times';
-	src: url('happy-times-NG_regular_master.otf') format('opentype');
+	font-family: 'Authentic-130';
+	src: url('fonts/AUTHENTICSans-Condensed-130.woff2') format('woff2');
 	font-weight: normal;
 	font-style: normal;
 }
 
 :root {
-	--body-font: 'Authentic-90', sans-serif;
-	--title-font: 'Authentic-90', sans-serif;
+	--body-font: 'Authentic-90', 'Arial', sans-serif;
+	--title-font: 'Authentic-130', 'Arial Narrow', sans-serif;
 	--secondary-font: 'Times New Roman', serif;
 	--text: #000000;
 	--grey: #acacac;
@@ -61,11 +61,6 @@ header nav {
 	flex-direction: column;
 	position: fixed;
 	top: 4rem;
-
-	/* flex-wrap: wrap; */
-	/* justify-content: space-evenly; */
-	/* border: 1px solid var(--text); */
-	/* border-style: dotted none; */
 	z-index: 4;
 }
 
@@ -81,7 +76,7 @@ header nav a {
 	color: var(--text);
 	text-transform: uppercase;
 	font-size: 0.85rem;
-	font-family: var(--title-font);
+	font-family: var(--body-font);
 }
 
 header nav a::before {
@@ -95,14 +90,14 @@ header nav a::before {
 }
 
 header nav a:hover {
-	color: var(--green);
+	color: var(--red);
 }
 
 header nav a:hover::before {
 	content: '';
 	width: 4px;
 	height: 4px;
-	background: var(--green);
+	background: var(--red);
 	display: inline-flex;
 	border-radius: 1rem;
 	margin: 3px 0.5rem;
@@ -143,8 +138,9 @@ main section {
 main section p:first-of-type {
 	padding-top: 4rem;
 	text-transform: uppercase;
-	font-family: var(--body-font);
+	font-family: var(--title-font);
 	font-size: 2rem;
+	color: var(--red);
 }
 
 main section p {
@@ -161,6 +157,7 @@ main .signatories em {
 	margin-left: 1rem;
 	text-transform: none;
 	font-size: 0.85rem;
+	font-family: var(--body-font);
 }
 
 main .signatories em:nth-of-type(1)::after {
@@ -177,7 +174,7 @@ main .signatories div a:nth-of-type(1)::before {
 }
 
 main .signatories div a {
-	color: var(--green);
+	color: var(--grey);
 	text-decoration: none;
 }
 
@@ -207,7 +204,16 @@ h1 {
 footer {
 	padding: 4rem 0;
 	text-align: right;
+}
+
+footer p {
 	color: var(--grey);
+	font-size: 0.85rem;
+}
+
+footer p:nth-of-type(1)::before {
+	content: 'Last updated';
+	margin-right: 0.25rem;
 }
 
 #statements,
