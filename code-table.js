@@ -28,6 +28,24 @@ $(document).ready(function () {
 						`</li>`
 				).appendTo('#signatories');
 
+				let pre = $(
+					`<em data-confirm="` +
+						entry.signatoriesTotal +
+						`">` +
+						entry.signatoriesTotal +
+						`</em>`
+				).appendTo('#signatoriesTotal');
+
+				let a = $(
+					`<a
+						href="` +
+						entry.signupLink +
+						`">
+						` +
+						entry.signupButton +
+						`</a>`
+				).appendTo('#signUpHere');
+
 				let details = $(
 					`<details data-confirm="` +
 						entry.faqTitle +
@@ -38,7 +56,7 @@ $(document).ready(function () {
 						entry.faqTitle +
 						`
 						</summary>
-						<div><p>` +
+						<div><p class="faq">` +
 						entry.faqSection +
 						`</p></div>
 						</details>`
@@ -47,6 +65,14 @@ $(document).ready(function () {
 				let article = $(
 					`<p data-confirm="` + entry.about + `">` + entry.about + `</p>`
 				).appendTo('#about');
+
+				let footer = $(
+					`<p data-confirm="` +
+						entry.lastUpdated +
+						`">` +
+						entry.lastUpdated +
+						`</p>`
+				).appendTo('#lastUpdated');
 			});
 		}
 	);

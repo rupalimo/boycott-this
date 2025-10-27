@@ -1,17 +1,25 @@
 @font-face {
-	font-family: '';
-	src: url('') format('woff2');
+	font-family: 'Authentic-90';
+	src: url('AUTHENTICSans-90.woff') format('woff2');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Happy-Times';
+	src: url('happy-times-NG_regular_master.otf') format('opentype');
 	font-weight: normal;
 	font-style: normal;
 }
 
 :root {
-	--body-font: 'Arial', sans-serif;
+	--body-font: 'Authentic-90', sans-serif;
+	--title-font: 'Authentic-90', sans-serif;
 	--secondary-font: 'Times New Roman', serif;
 	--text: #000000;
 	--grey: #acacac;
-	--accent-colour: red;
---green: #81ce0f;
+	--red: red;
+	--green: #00e526;
 	font-family: var(--body-font);
 	color: var(--text);
 	font-size: 16px;
@@ -53,6 +61,7 @@ header nav {
 	flex-direction: column;
 	position: fixed;
 	top: 4rem;
+
 	/* flex-wrap: wrap; */
 	/* justify-content: space-evenly; */
 	/* border: 1px solid var(--text); */
@@ -72,43 +81,32 @@ header nav a {
 	color: var(--text);
 	text-transform: uppercase;
 	font-size: 0.85rem;
+	font-family: var(--title-font);
 }
 
 header nav a::before {
-	content: "";
-  width: 4px;
-  height: 4px;
-  background: white;
-  display: inline-flex;
-  border-radius: 1rem;
-  margin: 3px 0.5rem;
+	content: '';
+	width: 4px;
+	height: 4px;
+	background: white;
+	display: inline-flex;
+	border-radius: 1rem;
+	margin: 3px 0.5rem;
+}
+
+header nav a:hover {
+	color: var(--green);
 }
 
 header nav a:hover::before {
-	content: "";
-  width: 4px;
-  height: 4px;
-  background: var(--text);
-  display: inline-flex;
-  border-radius: 1rem;
-  margin: 3px 0.5rem;
+	content: '';
+	width: 4px;
+	height: 4px;
+	background: var(--green);
+	display: inline-flex;
+	border-radius: 1rem;
+	margin: 3px 0.5rem;
 }
-
-header img {
-	/* width: calc(100% - 2rem); */
-	/* padding: 1rem 0; */
-} 
-
-/* header img:first-of-type {
-	width: calc(50% - 2rem);
-	padding: 1rem;
-	margin: 0 0 0 auto;
-}
-
-header img:nth-of-type(2) {
-	width: calc(100% - 2rem);
-	padding: 0;
-} */
 
 main {
 	display: grid;
@@ -117,24 +115,12 @@ main {
 	padding: 10vh 0;
 }
 
-main nav {
-	/* display: flex;
-	flex-direction: column;
-	padding: 1rem;
-	width: 100%;
-	position: sticky;
-	top: 2rem; */
-	/* flex-wrap: wrap; */
-	/* justify-content: space-evenly; */
-	/* border: 1px solid var(--text); */
-	/* border-style: dotted none; */
-}
-
-
 main nav a[href='#'],
 li[data-confirm='undefined'],
 details[data-confirm='undefined'],
-p[data-confirm='undefined'] {
+p[data-confirm='undefined'],
+main section p[data-confirm='undefined'],
+main section em[data-confirm='undefined'] {
 	display: none;
 }
 
@@ -146,17 +132,70 @@ main nav a {
 }
 
 main nav a:hover {
-		text-decoration: underline;
-
+	text-decoration: underline;
 }
 
 main section {
 	grid-column: 2;
-	padding: 1rem 0 2rem 0;
+	font-size: 1.25rem;
+}
+
+main section p:first-of-type {
+	padding-top: 4rem;
+	text-transform: uppercase;
+	font-family: var(--body-font);
+	font-size: 2rem;
 }
 
 main section p {
 	margin: 0 0 1rem 0;
+}
+
+main section li {
+	list-style: none;
+}
+
+main .signatories em {
+	font-style: normal;
+	/* color: var(--grey); */
+	margin-left: 1rem;
+	text-transform: none;
+	font-size: 0.85rem;
+}
+
+main .signatories em:nth-of-type(1)::after {
+	content: 'total';
+	margin-left: 0.25rem;
+}
+
+main .signatories div {
+	padding-bottom: 1rem;
+}
+
+main .signatories div a:nth-of-type(1)::before {
+	content: '+';
+}
+
+main .signatories div a {
+	color: var(--green);
+	text-decoration: none;
+}
+
+main section details {
+	cursor: pointer;
+}
+
+main section details summary div {
+	padding: 1rem;
+}
+
+main section details .faq {
+	text-transform: none;
+	font-size: 1.25rem;
+	padding: 1.25rem;
+	border-left: 2px solid var(--green);
+	margin-left: 4px;
+	text-align: justify;
 }
 
 h1 {
