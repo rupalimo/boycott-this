@@ -66,13 +66,7 @@ body {
 	margin: 0;
 	padding: 0;
 
-	background-image: linear-gradient(
-		to bottom,
-		white,
-		#e4e4e4 25%,
-		var(--green) 70%,
-		#d1d1d1
-	);
+	background-image: linear-gradient( to bottom, white, #e4e4e4 2%,#e4e4e4 24%, var(--green) 32%, var(--green) 93%, #e4e4e4 97%, white);
 }
 
 main,
