@@ -30,7 +30,7 @@
 	--body-font: 'Authentic-90', 'Arial', sans-serif;
 	--title-font: 'Authentic-130', 'Arial Narrow', sans-serif;
 	--secondary-font: 'Times New Roman', serif;
-	--text: #ffffff;
+	--text: #000000;
 	--grey: #676767;
 	--red: red;
 	--green: #00e526;
@@ -280,10 +280,10 @@ main section details .faq {
 	text-transform: none;
 	font-size: 1.25rem;
 	padding: 1.25rem;
-	border-left: 2px solid white;
+	border-left: 2px solid var(--text);
 	margin-left: 4px;
 	text-align: justify;
-	color: white;
+	color: var(--text);
 	font-family: var(--body-font);
 }
 
