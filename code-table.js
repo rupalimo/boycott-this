@@ -66,6 +66,18 @@ $(document).ready(function () {
 					`<p data-confirm="` + entry.about + `">` + entry.about + `</p>`
 				).appendTo('#about');
 
+				let ol = $(
+					`<li data-confirm="` +
+						entry.furtherReadingTitle +
+						`"><a target="_blank" href="` +
+						entry.furtherReadingLink +
+						`" data-confirm="` +
+						entry.furtherReadingTitle +
+						`">` +
+						entry.furtherReadingTitle +
+						`</a></li>`
+				).appendTo('#furtherReading');
+
 				let footer = $(
 					`<p data-confirm="` +
 						entry.lastUpdated +

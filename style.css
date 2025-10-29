@@ -68,8 +68,8 @@ body {
 	background-image: linear-gradient(
 		to bottom,
 		white,
-		#e4e4e4 2%,
-		#e4e4e4 24%,
+		#efefef 12%,
+		#efefef 24%,
 		var(--green) 32%,
 		var(--green) 93%,
 		#e4e4e4 97%,
@@ -105,7 +105,7 @@ header nav {
 header nav a[href='#'],
 li[data-confirm='undefined'],
 details[data-confirm='undefined'],
-p[data-confirm='undefined'] {
+p[data-confirm='undefined'], section a[href='undefined'] {
 	display: none;
 }
 
@@ -195,9 +195,17 @@ main section p:first-of-type {
 
 main section p {
 	margin: 0 0 1rem 0;
+
 }
 
-main section li {
+.letter em {
+	font-style: normal;
+	text-decoration: underline;
+	text-decoration-thickness: 1px;
+	text-underline-offset: 2px;
+
+}
+main .signatories li {
 	list-style: none;
 }
 
@@ -253,7 +261,7 @@ main .signatories div a:hover {
 			background: white; */
 	/* border: 1px solid var(--green); */
 	/* border: 1px solid var(--title); */
-	box-shadow: 0 0 8px 4px #cbcbcb inset;
+background-color: #e4e4e4;
 }
 
 main .signatories div + div {
@@ -272,9 +280,23 @@ main section details .faq {
 	text-transform: none;
 	font-size: 1.25rem;
 	padding: 1.25rem;
-	border-left: 2px solid var(--green);
+	border-left: 2px solid white;
 	margin-left: 4px;
 	text-align: justify;
+	color: white;
+	font-family: var(--body-font);
+}
+
+
+
+main .furtherReading li {
+list-style: square;
+  margin: 0 0 0 1.25rem;
+}
+
+main section a {
+	text-decoration: none;
+	color: var(--text);
 }
 
 h1 {
@@ -296,11 +318,6 @@ footer p {
 footer p:nth-of-type(1)::before {
 	content: 'Last updated';
 	margin-right: 0.25rem;
-}
-
-#statements,
-#media {
-	display: none;
 }
 
 @media only screen and (max-width: 1024px) {
