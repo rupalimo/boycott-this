@@ -39,7 +39,7 @@ $(document).ready(function () {
 				let a = $(
 					`<a
 						href="` +
-						entry.signupLink +
+						entry.signupURL +
 						`">
 						` +
 						entry.signupButton +
@@ -68,15 +68,15 @@ $(document).ready(function () {
 
 				let ol = $(
 					`<li data-confirm="` +
-						entry.furtherReadingTitle +
+						entry.mediaTitle +
 						`"><a target="_blank" href="` +
-						entry.furtherReadingLink +
+						entry.mediaURL +
 						`" data-confirm="` +
-						entry.furtherReadingTitle +
+						entry.mediaTitle +
 						`">` +
-						entry.furtherReadingTitle +
+						entry.mediaTitle +
 						`</a></li>`
-				).appendTo('#furtherReading');
+				).appendTo('#media');
 
 				let footer = $(
 					`<p data-confirm="` +

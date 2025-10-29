@@ -288,8 +288,7 @@ main section details .faq {
 }
 
 
-
-main .furtherReading li {
+main .media li {
 list-style: square;
   margin: 0 0 0 1.25rem;
 }
