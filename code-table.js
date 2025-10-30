@@ -67,15 +67,19 @@ $(document).ready(function () {
 				).appendTo('#about');
 
 				let ol = $(
-					`<li data-confirm="` +
+					`<span data-confirm="` +
 						entry.mediaTitle +
-						`"><a target="_blank" href="` +
+						`"><p data-confirm="` +
+						entry.mediaPullQuote +
+						`">` +
+						entry.mediaPullQuote +
+						`</p><a target="_blank" href="` +
 						entry.mediaURL +
 						`" data-confirm="` +
 						entry.mediaTitle +
 						`">` +
 						entry.mediaTitle +
-						`</a></li>`
+						`</a></span>`
 				).appendTo('#media');
 
 				let footer = $(
